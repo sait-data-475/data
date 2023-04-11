@@ -21,12 +21,14 @@ api.authenticate()
 api.competition_download_files(
     "titanic",
     path=output,
-    quiet=True,
 )
 api.competition_download_files(
     "house-prices-advanced-regression-techniques",
     path=output,
-    quiet=True,
+)
+api.competition_download_files(
+    "plant-seedlings-classification",
+    path=output,
 )
 
 base = "https://archive.ics.uci.edu/ml/machine-learning-databases/"
@@ -54,9 +56,7 @@ imdb.mkdir(exist_ok=True)
 
 def get_text(path):
     with open(path, encoding="utf-8") as f:
-        text = f.read()
-
-    text = BeautifulSoup(text, features="html.parser").get_text()
+        text = BeautifulSoup(f, features="html.parser").get_text()
 
     return text
 
