@@ -1,3 +1,4 @@
+import subprocess
 import tarfile
 from pathlib import Path
 from urllib.parse import urljoin
@@ -82,3 +83,17 @@ def create_dataset(name):
 
 create_dataset("train")
 create_dataset("test")
+
+seedlings = output / "plant-seedlings-classification"
+seedlings.mkdir(exist_ok=True)
+
+subprocess.call(
+    [
+        "zip",
+        output / "plant-seedlings-classification.zip",
+        "--out",
+        seedlings / "plant-seedlings-classification/",
+        "-s",
+        "450m",
+    ]
+)
