@@ -2,4 +2,4 @@ BeautifulSoup4==4.12.3
 kaggle==1.6.17
 pandas==2.2.3
 python-dotenv==1.0.1
-tqdm==4.66.6
+tqdm==4.67.0
