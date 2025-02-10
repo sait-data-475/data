@@ -1,4 +1,4 @@
-BeautifulSoup4==4.13.1
+BeautifulSoup4==4.13.3
 kaggle==1.6.17
 pandas==2.2.3
 python-dotenv==1.0.1
